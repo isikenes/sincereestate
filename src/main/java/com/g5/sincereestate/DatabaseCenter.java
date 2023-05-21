@@ -58,4 +58,38 @@ public class DatabaseCenter {
             return false;
         }
     }
+    public static byte[] getImage(int property_id){
+        String query="SELECT image FROM properties WHERE property_id = ?";
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, property_id);
+            ResultSet rs = statement.executeQuery();
+
+            if (rs.next()) {
+                byte[] imageData = rs.getBytes("image");
+
+                rs.close();
+                statement.close();
+                return imageData;
+            } else {
+                throw new RuntimeException("No image found for property_id: " + property_id);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    public static void setImage(int property_id, byte[] image_data){
+        String query="UPDATE properties SET image = ? WHERE property_id = ?";
+        try {
+            PreparedStatement preparedStatement=connection.prepareStatement(query);
+
+            preparedStatement.setBytes(1,image_data);
+            preparedStatement.setInt(2,property_id);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
