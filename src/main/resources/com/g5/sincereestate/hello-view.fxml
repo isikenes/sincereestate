@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <FlowPane prefHeight="471.0" prefWidth="693.0">
+        <children>
+            <Pane prefHeight="214.0" prefWidth="238.0" style="-fx-border-width: 5px; -fx-border-color: black;">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <Image url="@temp.png"/>
+                    </ImageView>
+                    <Label alignment="CENTER" layoutX="24.0" layoutY="166.0" prefHeight="34.0" prefWidth="191.0" text="SAHİBİNDEN SATILIK EV AMK" textAlignment="CENTER">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+                </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="214.0" prefWidth="238.0">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@temp.png" />
+                  </image></ImageView>
+                    <Label alignment="CENTER" layoutX="30.0" layoutY="163.0" prefHeight="34.0" prefWidth="176.0" text="Label" textAlignment="CENTER" />
+                </children>
+            </Pane>
+            <Pane layoutX="248.0" layoutY="10.0" prefHeight="214.0" prefWidth="238.0">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" />
+                    <Label alignment="CENTER" layoutX="30.0" layoutY="163.0" prefHeight="34.0" prefWidth="176.0" text="Label" textAlignment="CENTER" />
+                </children>
+            </Pane>
+            <Pane layoutX="486.0" layoutY="10.0" prefHeight="214.0" prefWidth="238.0">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" />
+                    <Label alignment="CENTER" layoutX="30.0" layoutY="163.0" prefHeight="34.0" prefWidth="176.0" text="Label" textAlignment="CENTER" />
+                </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="224.0" prefHeight="214.0" prefWidth="238.0">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" />
+                    <Label alignment="CENTER" layoutX="30.0" layoutY="163.0" prefHeight="34.0" prefWidth="176.0" text="Label" textAlignment="CENTER" />
+                </children>
+            </Pane>
+            <Pane layoutX="248.0" layoutY="224.0" prefHeight="214.0" prefWidth="238.0">
+                <children>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" />
+                    <Label alignment="CENTER" layoutX="30.0" layoutY="163.0" prefHeight="34.0" prefWidth="176.0" text="Label" textAlignment="CENTER" />
+                </children>
+            </Pane>
+        </children>
+    </FlowPane>
+
+    <Label fx:id="welcomeText" />
+
+
+</VBox>
