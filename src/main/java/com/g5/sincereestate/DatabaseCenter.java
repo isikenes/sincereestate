@@ -41,4 +41,21 @@ public class DatabaseCenter {
         }
         return false;
     }
+
+    public static boolean canCreateUser(String firstName, String lastName, String email, String password, String phone, String birthdate) {
+        String query="INSERT INTO users (first_name, last_name, user_email, user_password, phone_number, birth_date) VALUES(?,?,?,?,?,?)";
+        try {
+            PreparedStatement statement=connection.prepareStatement(query);
+            statement.setString(1,firstName);
+            statement.setString(2,lastName);
+            statement.setString(3,email);
+            statement.setString(4,password);
+            statement.setString(5,phone);
+            statement.setString(6,birthdate);
+            statement.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
 }

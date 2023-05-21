@@ -4,39 +4,49 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.LoginController">
-    <Label alignment="CENTER" layoutX="232.0" layoutY="12.0" prefHeight="77.0" prefWidth="334.0" text="Sincere Estate" textAlignment="CENTER">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;"
+            xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.g5.sincereestate.LoginController">
+    <Label alignment="CENTER" layoutX="232.0" layoutY="12.0" prefHeight="77.0" prefWidth="334.0" text="Sincere Estate"
+           textAlignment="CENTER">
         <font>
-            <Font name="Consolas Bold" size="36.0" />
+            <Font name="Consolas Bold" size="36.0"/>
         </font>
     </Label>
-    <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#GoMainScene" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 2px; -fx-text-fill: #BBE1FA;" text="Back">
+    <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#GoMainScene" prefHeight="20.0"
+            prefWidth="80.0"
+            style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 2px; -fx-text-fill: #BBE1FA;"
+            text="Back">
         <font>
-            <Font name="Consolas" size="20.0" />
+            <Font name="Consolas" size="20.0"/>
         </font>
     </Button>
     <Label layoutX="232.0" layoutY="160.0" text="E-mail:">
         <font>
-            <Font name="Consolas" size="24.0" />
+            <Font name="Consolas" size="24.0"/>
         </font>
     </Label>
     <TextField fx:id="emailTF" layoutX="232.0" layoutY="200.0" prefHeight="44.0" prefWidth="334.0">
         <font>
-            <Font name="Consolas" size="24.0" />
+            <Font name="Consolas" size="24.0"/>
         </font>
     </TextField>
     <Label layoutX="232.0" layoutY="300.0" text="Password:">
         <font>
-            <Font name="Consolas" size="24.0" />
+            <Font name="Consolas" size="24.0"/>
         </font>
     </Label>
     <PasswordField fx:id="passwordTF" layoutX="232.0" layoutY="340.0" prefHeight="44.0" prefWidth="334.0">
-      <font>
-         <Font name="Consolas" size="24.0" />
-      </font></PasswordField>
-    <Button layoutX="300.0" layoutY="448.0" mnemonicParsing="false" onAction="#CheckLogin" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Login">
         <font>
-            <Font name="Consolas" size="26.0" />
+            <Font name="Consolas" size="24.0"/>
+        </font>
+    </PasswordField>
+    <Button layoutX="300.0" layoutY="448.0" mnemonicParsing="false" onAction="#CheckLogin" prefHeight="50.0"
+            prefWidth="200.0"
+            style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;"
+            text="Login">
+        <font>
+            <Font name="Consolas" size="26.0"/>
         </font>
     </Button>
 </AnchorPane>

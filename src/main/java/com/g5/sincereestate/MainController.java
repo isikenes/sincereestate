@@ -22,5 +22,17 @@ public class MainController {
         }
     }
 
+    public void GoSignUpScene(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("signup-scene.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

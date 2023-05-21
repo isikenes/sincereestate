@@ -13,7 +13,7 @@
       <font>
          <Font name="Consolas" size="26.0" />
       </font></Button>
-   <Button layoutX="310.0" layoutY="460.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Sign Up">
+   <Button layoutX="310.0" layoutY="460.0" mnemonicParsing="false" onAction="#GoSignUpScene" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Sign Up">
       <font>
          <Font name="Consolas" size="26.0" />
       </font>
