@@ -10,6 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Sincere Estate" target="19" />
       <module name="SincereEstate" target="19" />
     </bytecodeTargetLevel>
   </component>

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="942d1057-2932-40ef-89e8-e49323a39b22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/Property.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="2195315b-8747-4b43-ab9d-e13d6e5bb5a3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,44 +18,35 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2Q7IvVotAdpYoxnUk13lFg98qmu" />
+  <component name="ProjectId" id="2Q4BXCbxnqP4FzAptpZjhFSE8Yu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Binbariyon/Documents/GitHub/sincereestate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Binbariyon\Documents\GitHub\sincereestate\src\main\resources\com\g5\sincereestate" />
-      <recent name="C:\Users\Binbariyon\Documents\GitHub\sincereestate\src\main\resources" />
+      <recent name="C:\Users\isikenes\IdeaProjects\Sincere Estate\src\main\resources\com\g5\sincereestate" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SincereEstateApplication">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Launcher">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.g5.sincereestate.Launcher" />
       <module name="SincereEstate" />
@@ -77,63 +62,40 @@
     </configuration>
     <configuration name="SincereEstateApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.g5.sincereestate.SincereEstateApplication" />
-      <module name="SincereEstate" />
+      <module name="Sincere Estate" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.g5.sincereestate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.g5.sincereestate.Test" />
-      <module name="SincereEstate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.g5.sincereestate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="sincereestate" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="sincereestate" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SincereEstateApplication" />
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.SincereEstateApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="942d1057-2932-40ef-89e8-e49323a39b22" name="Changes" comment="" />
-      <created>1684698424072</created>
+      <changelist id="2195315b-8747-4b43-ab9d-e13d6e5bb5a3" name="Changes" comment="" />
+      <created>1684603016214</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684698424072</updated>
-      <workItem from="1684698425248" duration="7517000" />
-      <workItem from="1684776217186" duration="32000" />
-      <workItem from="1684946393992" duration="276000" />
-      <workItem from="1684947497991" duration="8276000" />
+      <updated>1684603016214</updated>
+      <workItem from="1684603018198" duration="915000" />
+      <workItem from="1684603961951" duration="437000" />
+      <workItem from="1684604411278" duration="4258000" />
+      <workItem from="1684677040885" duration="6226000" />
+      <workItem from="1684698008916" duration="6777000" />
+      <workItem from="1684749252425" duration="186000" />
+      <workItem from="1684749473966" duration="130000" />
+      <workItem from="1684959862804" duration="6395000" />
     </task>
     <servers />
   </component>

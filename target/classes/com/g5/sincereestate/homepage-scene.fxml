@@ -1,14 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.g5.sincereestate.HomePageController"
-            prefHeight="600.0" prefWidth="800.0">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.HomePageController">
+    <FlowPane prefHeight="500.0" prefWidth="800.0">
+        <Pane fx:id="pane1" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px;">
+            <FlowPane.margin>
+                <Insets left="20.0" top="20.0" />
+            </FlowPane.margin>
+            <ImageView fx:id="image1" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@defimage.png" />
+            </ImageView>
+            <Label fx:id="typeLabel1" alignment="CENTER" layoutX="30.0" layoutY="164.0" prefHeight="28.0" prefWidth="181.0" text="multi-family" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="priceLabel1" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="192.0" prefHeight="28.0" prefWidth="181.0" text="10000$" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </Pane>
+        <Pane fx:id="pane2" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px;">
+            <FlowPane.margin>
+                <Insets left="20.0" top="20.0" />
+            </FlowPane.margin>
+            <ImageView fx:id="image2" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@defimage.png" />
+            </ImageView>
+            <Label fx:id="typeLabel2" alignment="CENTER" layoutX="30.0" layoutY="164.0" prefHeight="28.0" prefWidth="181.0" text="multi-family" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="priceLabel2" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="192.0" prefHeight="28.0" prefWidth="181.0" text="10000$" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </Pane>
+        <Pane fx:id="pane3" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px;">
+            <FlowPane.margin>
+                <Insets left="20.0" top="20.0" />
+            </FlowPane.margin>
+            <ImageView fx:id="image3" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@defimage.png" />
+            </ImageView>
+            <Label fx:id="typeLabel3" alignment="CENTER" layoutX="30.0" layoutY="164.0" prefHeight="28.0" prefWidth="181.0" text="multi-family" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="priceLabel3" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="192.0" prefHeight="28.0" prefWidth="181.0" text="10000$" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </Pane>
+        <Pane fx:id="pane4" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px;">
+            <FlowPane.margin>
+                <Insets left="20.0" top="20.0" />
+            </FlowPane.margin>
+            <ImageView fx:id="image4" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@defimage.png" />
+            </ImageView>
+            <Label fx:id="typeLabel4" alignment="CENTER" layoutX="30.0" layoutY="164.0" prefHeight="28.0" prefWidth="181.0" text="multi-family" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="priceLabel4" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="192.0" prefHeight="28.0" prefWidth="181.0" text="10000$" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </Pane>
+        <Pane fx:id="pane5" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px;">
+            <FlowPane.margin>
+                <Insets left="20.0" top="20.0" />
+            </FlowPane.margin>
+            <ImageView fx:id="image5" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@defimage.png" />
+            </ImageView>
+            <Label fx:id="typeLabel5" alignment="CENTER" layoutX="30.0" layoutY="164.0" prefHeight="28.0" prefWidth="181.0" text="multi-family" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="priceLabel5" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="192.0" prefHeight="28.0" prefWidth="181.0" text="10000$" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </Pane>
+        <Pane fx:id="pane6" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px;">
+            <FlowPane.margin>
+                <Insets left="20.0" top="20.0" />
+            </FlowPane.margin>
+            <ImageView fx:id="image6" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@defimage.png" />
+            </ImageView>
+            <Label fx:id="typeLabel6" alignment="CENTER" layoutX="30.0" layoutY="164.0" prefHeight="28.0" prefWidth="181.0" text="multi-family" textAlignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label fx:id="priceLabel6" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="192.0" prefHeight="28.0" prefWidth="181.0" text="10000$" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+        </Pane>
+
+
+    </FlowPane>
+    <Button layoutX="50.0" layoutY="515.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Refresh">
+        <font>
+            <Font name="Consolas" size="22.0" />
+        </font>
+    </Button>
+    <Button layoutX="300.0" layoutY="515.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="New Ad">
+        <font>
+            <Font name="Consolas" size="22.0" />
+        </font>
+    </Button>
+    <Button layoutX="550.0" layoutY="515.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="My Properties">
+        <font>
+            <Font name="Consolas" size="22.0" />
+        </font>
+    </Button>
 
 </AnchorPane>

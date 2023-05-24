@@ -58,6 +58,7 @@ public class DatabaseCenter {
             return false;
         }
     }
+
     public static byte[] getImage(int property_id){
         String query="SELECT image FROM properties WHERE property_id = ?";
         try {
@@ -72,13 +73,14 @@ public class DatabaseCenter {
                 statement.close();
                 return imageData;
             } else {
-                throw new RuntimeException("No image found for property_id: " + property_id);
+                return null;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
     }
+
     public static void setImage(int property_id, byte[] image_data){
         String query="UPDATE properties SET image = ? WHERE property_id = ?";
         try {
@@ -92,4 +94,37 @@ public class DatabaseCenter {
             throw new RuntimeException(e);
         }
     }
+
+    public static String getPropertyType(int id) {
+        String query="SELECT property_type FROM properties WHERE property_id = "+id;
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+
+            if (rs.next()) {
+                return rs.getString("property_type");
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String getPropertyPrice(int id) {
+        String query="SELECT property_price FROM properties WHERE property_id = "+id;
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+
+            if (rs.next()) {
+                return rs.getString("property_price");
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
