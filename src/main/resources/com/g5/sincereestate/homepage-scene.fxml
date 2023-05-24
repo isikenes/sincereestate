@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.g5.sincereestate.HomePageController"
-            prefHeight="600.0" prefWidth="800.0">
-
+<AnchorPane prefHeight="686.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.HomePageController">
+   <children>
+      <Pane prefHeight="74.0" prefWidth="807.0" style="-fx-background-color: #32B2B8;">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="51.0" layoutX="26.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="456.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@search.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="98.0" layoutY="18.0" prefHeight="39.0" prefWidth="358.0" style="-fx-background-color: DDE6ED;" />
+         </children>
+      </Pane>
+      <Pane layoutY="74.0" prefHeight="611.0" prefWidth="123.0" style="-fx-background-color: BLACK;" />
+      <TableView id="ads" layoutX="123.0" layoutY="74.0" prefHeight="611.0" prefWidth="684.0">
+         <columns>
+            <TableColumn fx:id="propertyType" prefWidth="139.199951171875" text="Property Type" />
+            <TableColumn fx:id="propertyStatus" minWidth="0.0" prefWidth="96.0" text="Property Status" />
+            <TableColumn fx:id="adDate" prefWidth="123.20001220703125" text="Ad Date" />
+            <TableColumn fx:id="price" prefWidth="113.5999755859375" text="Price" />
+            <TableColumn fx:id="location" prefWidth="212.79998779296875" text="Location" />
+         </columns>
+      </TableView>
+   </children>
 </AnchorPane>
