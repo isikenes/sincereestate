@@ -15,7 +15,8 @@ public class SincereEstateApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Sincere Estate");
         stage.setScene(scene);
-        stage.getIcons().add(new Image(getClass().getResourceAsStream("logo.png")));
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("images/logo.png")));
+        stage.setResizable(false);
         stage.show();
         DatabaseCenter.ConnectToDB();
     }

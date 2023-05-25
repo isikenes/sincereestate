@@ -16,7 +16,7 @@
                 <children>
                     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true"
                                preserveRatio="true">
-                        <Image url="@temp.png"/>
+                        <Image url="@images/temp.png"/>
                     </ImageView>
                     <Label alignment="CENTER" layoutX="24.0" layoutY="166.0" prefHeight="34.0" prefWidth="191.0" text="SAHİBİNDEN SATILIK EV AMK" textAlignment="CENTER">
                   <font>
@@ -28,7 +28,7 @@
                 <children>
                     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                   <image>
-                     <Image url="@temp.png" />
+                     <Image url="@images/temp.png" />
                   </image></ImageView>
                     <Label alignment="CENTER" layoutX="30.0" layoutY="163.0" prefHeight="34.0" prefWidth="176.0" text="Label" textAlignment="CENTER" />
                 </children>

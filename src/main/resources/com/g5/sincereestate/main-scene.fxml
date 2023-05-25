@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.MainController">
    <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="260.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@logo.png" />
+      <Image url="@images/logo.png" />
    </ImageView>
    <Button layoutX="310.0" layoutY="360.0" mnemonicParsing="false" onAction="#GoLoginScene" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Login">
       <font>

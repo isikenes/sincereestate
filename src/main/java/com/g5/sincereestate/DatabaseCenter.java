@@ -127,4 +127,87 @@ public class DatabaseCenter {
         }
     }
 
+    public static String getPropertyStatus(int id) {
+        String query="SELECT property_status FROM properties WHERE property_id = "+id;
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+
+            if (rs.next()) {
+                return rs.getString("property_status");
+            } else {
+                return null;
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static int[] getRandomPropertiesForSale() {
+        int[] indexes=new int[6];
+        int a=0;
+        try {
+            String sqlQuery = "SELECT property_id FROM properties WHERE property_status = 'for sale' ORDER BY RAND() LIMIT 6";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+            while (resultSet.next()) {
+                int propertyId = resultSet.getInt("property_id");
+                indexes[a]=propertyId;
+                a++;
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return indexes;
+    }
+
+    public static int[] getRandomPropertiesForRent() {
+        int[] indexes=new int[6];
+        int a=0;
+        try {
+            String sqlQuery = "SELECT property_id FROM properties WHERE property_status = 'for rent' ORDER BY RAND() LIMIT 6";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+            while (resultSet.next()) {
+                int propertyId = resultSet.getInt("property_id");
+                indexes[a]=propertyId;
+                a++;
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return indexes;
+    }
+
+    public static int[] getRandomPropertiesDailyRent() {
+        int[] indexes=new int[6];
+        int a=0;
+        try {
+            String sqlQuery = "SELECT property_id FROM properties WHERE property_status = 'daily rent' ORDER BY RAND() LIMIT 6";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+            while (resultSet.next()) {
+                int propertyId = resultSet.getInt("property_id");
+                indexes[a]=propertyId;
+                a++;
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return indexes;
+    }
+
 }
