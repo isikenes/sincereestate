@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.HomePageController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.HomePageController">
     <FlowPane prefHeight="500.0" prefWidth="800.0">
-        <Pane fx:id="pane1" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
+        <Pane fx:id="pane1" onMouseClicked="#GoPropertyPage1" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
                 <Insets left="20.0" top="20.0" />
             </FlowPane.margin>
@@ -37,7 +37,7 @@
                 </padding>
             </Label>
         </Pane>
-        <Pane fx:id="pane2" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
+        <Pane fx:id="pane2" onMouseClicked="#GoPropertyPage2" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
                 <Insets left="20.0" top="20.0" />
             </FlowPane.margin>
@@ -67,7 +67,7 @@
             </Label>
 
         </Pane>
-        <Pane fx:id="pane3" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
+        <Pane fx:id="pane3" onMouseClicked="#GoPropertyPage3" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
                 <Insets left="20.0" top="20.0" />
             </FlowPane.margin>
@@ -96,7 +96,7 @@
                 </padding>
             </Label>
         </Pane>
-        <Pane fx:id="pane4" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
+        <Pane fx:id="pane4" onMouseClicked="#GoPropertyPage4" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
                 <Insets left="20.0" top="20.0" />
             </FlowPane.margin>
@@ -125,7 +125,7 @@
                 </padding>
             </Label>
         </Pane>
-        <Pane fx:id="pane5" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
+        <Pane fx:id="pane5" onMouseClicked="#GoPropertyPage5" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
                 <Insets left="20.0" top="20.0" />
             </FlowPane.margin>
@@ -154,7 +154,7 @@
                 </padding>
             </Label>
         </Pane>
-        <Pane fx:id="pane6" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
+        <Pane fx:id="pane6" onMouseClicked="#GoPropertyPage6" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
                 <Insets left="20.0" top="20.0" />
             </FlowPane.margin>

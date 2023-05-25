@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.PropertyController">
+   <children>
+      <Button layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#GoHomePage" prefHeight="20.0" prefWidth="74.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 2px; -fx-text-fill: #BBE1FA;" text="Back">
+         <font>
+            <Font name="Consolas" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="propertyImage" fitHeight="313.0" fitWidth="324.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/defimage.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="typeLabel" layoutX="345.0" layoutY="25.0" text="Propert type: Multi-Family">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" layoutX="345.0" layoutY="65" text="Propert Status:">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="adDateLabel" layoutX="345.0" layoutY="105" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="squarametersLabel" layoutX="345.0" layoutY="145" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+
+      <Label fx:id="addressLabel" layoutX="345.0" layoutY="185" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="furnishedLabel" layoutX="345.0" layoutY="225" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomLabel" layoutX="345.0" layoutY="265" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="buildingAgeLabel" layoutX="345.0" layoutY="305" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="propertyPriceLabel" alignment="CENTER" layoutX="417.0" layoutY="337.0" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="30" />
+         </font>
+      </Label>
+      <Label fx:id="ownernameLabel" layoutX="14.0" layoutY="360.0" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="ownerPhoneNumberLabel" alignment="CENTER_RIGHT" layoutX="272.0" layoutY="360.0" text="Label">
+         <font>
+            <Font name="Consolas Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

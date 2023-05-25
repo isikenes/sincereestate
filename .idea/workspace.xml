@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2195315b-8747-4b43-ab9d-e13d6e5bb5a3" name="Changes" comment="" />
+    <list default="true" id="2195315b-8747-4b43-ab9d-e13d6e5bb5a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/CreatingAdController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/PropertyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/creatingAd-scene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/propertypage-scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sincere Estate.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/DatabaseCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/DatabaseCenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/Property.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/defimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/temp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/defimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/temp.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,23 +38,29 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Q4BXCbxnqP4FzAptpZjhFSE8Yu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Binbariyon/Documents/GitHub/sincereestate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\isikenes\IdeaProjects\Sincere Estate\src\main\resources\com\g5\sincereestate\images" />
@@ -99,6 +125,7 @@
       <workItem from="1684959862804" duration="7045000" />
       <workItem from="1684997451516" duration="1479000" />
       <workItem from="1685000460925" duration="5794000" />
+      <workItem from="1685008517785" duration="8145000" />
     </task>
     <servers />
   </component>
