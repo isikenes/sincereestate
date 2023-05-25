@@ -73,8 +73,8 @@ public class PropertyController implements Initializable {
         int owner_id= DatabaseCenter.getOwnerID(selectedProperty);
         adDateLabel.setText("Ad Date: " + DatabaseCenter.getAdDate(selectedProperty));
 
-        addressLabel.setText("Address:"+DatabaseCenter.getCity(selectedProperty)
-                +" "+DatabaseCenter.getStreet(selectedProperty)+" "
+        addressLabel.setText("Address: "+DatabaseCenter.getStreet(selectedProperty)
+                +" street, "+DatabaseCenter.getCity(selectedProperty)+", "
                 + DatabaseCenter.getZip(selectedProperty));
 
         buildingAgeLabel.setText("Building Age: "+DatabaseCenter.getBuildingAge(selectedProperty));
@@ -88,7 +88,7 @@ public class PropertyController implements Initializable {
         }
         propertyImage.setImage(image);
         ownernameLabel.setText(DatabaseCenter.getOwnerFullName(owner_id));
-        ownerPhoneNumberLabel.setText(DatabaseCenter.getOwnerPhoneNumber(owner_id));
+        ownerPhoneNumberLabel.setText("+"+DatabaseCenter.getOwnerPhoneNumber(owner_id));
 
         propertyPriceLabel.setText(DatabaseCenter.getPropertyPrice(selectedProperty)+"$");
         roomLabel.setText("Number Of Rooms: "+DatabaseCenter.getNumberOfRooms(selectedProperty));

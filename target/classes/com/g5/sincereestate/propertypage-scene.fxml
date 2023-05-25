@@ -5,73 +5,74 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.PropertyController">
-   <children>
-      <Button layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#GoHomePage" prefHeight="20.0" prefWidth="74.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 2px; -fx-text-fill: #BBE1FA;" text="Back">
-         <font>
-            <Font name="Consolas" size="15.0" />
-         </font>
-      </Button>
-      <ImageView fx:id="propertyImage" fitHeight="313.0" fitWidth="324.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/defimage.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="typeLabel" layoutX="345.0" layoutY="25.0" text="Propert type: Multi-Family">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="statusLabel" layoutX="345.0" layoutY="65" text="Propert Status:">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="adDateLabel" layoutX="345.0" layoutY="105" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="squarametersLabel" layoutX="345.0" layoutY="145" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.PropertyController">
+   <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#GoHomePage" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 2px; -fx-text-fill: #BBE1FA;" text="Back">
+      <font>
+         <Font name="Consolas" size="20.0" />
+      </font>
+   </Button>
+   <ImageView fx:id="propertyImage" fitHeight="420.0" fitWidth="420.0" layoutX="20.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@images/defimage.png" />
+   </ImageView>
+   <Label fx:id="typeLabel" layoutX="469.0" layoutY="80.0" text="Propert type: Multi-Family">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="statusLabel" layoutX="469.0" layoutY="130.0" text="Propert Status:">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="adDateLabel" layoutX="469.0" layoutY="180.0" text="Label">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="squarametersLabel" layoutX="469.0" layoutY="230.0" text="Label">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="furnishedLabel" layoutX="469.0" layoutY="280.0" text="Label">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="roomLabel" layoutX="469.0" layoutY="330.0" text="Label">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="buildingAgeLabel" layoutX="469.0" layoutY="380.0" text="Label">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
 
-      <Label fx:id="addressLabel" layoutX="345.0" layoutY="185" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="furnishedLabel" layoutX="345.0" layoutY="225" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="roomLabel" layoutX="345.0" layoutY="265" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="buildingAgeLabel" layoutX="345.0" layoutY="305" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="propertyPriceLabel" alignment="CENTER" layoutX="417.0" layoutY="337.0" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="30" />
-         </font>
-      </Label>
-      <Label fx:id="ownernameLabel" layoutX="14.0" layoutY="360.0" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label fx:id="ownerPhoneNumberLabel" alignment="CENTER_RIGHT" layoutX="272.0" layoutY="360.0" text="Label">
-         <font>
-            <Font name="Consolas Bold" size="20.0" />
-         </font>
-      </Label>
-   </children>
+   <Label fx:id="addressLabel" alignment="TOP_LEFT" layoutX="469.0" layoutY="430.0" prefHeight="80.0" prefWidth="286.0" text="Label" wrapText="true">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="propertyPriceLabel" alignment="CENTER" layoutX="500.0" layoutY="526.0" prefHeight="35.0" prefWidth="224.0" text="Label">
+      <font>
+         <Font name="Consolas Bold" size="30" />
+      </font>
+   </Label>
+   <Label fx:id="ownernameLabel" layoutX="20.0" layoutY="555.0" text="Label">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="ownerPhoneNumberLabel" alignment="CENTER_RIGHT" layoutX="266.0" layoutY="555.0" prefHeight="23.0" prefWidth="174.0" text="Label" textAlignment="CENTER">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="ownernameLabel1" layoutX="20.0" layoutY="520.0" text="Owner:">
+      <font>
+         <Font name="Consolas Bold" size="20.0" />
+      </font>
+   </Label>
 </AnchorPane>
