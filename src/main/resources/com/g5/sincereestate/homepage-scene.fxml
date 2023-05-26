@@ -206,7 +206,7 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button layoutX="250.0" layoutY="504.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
+    <Button layoutX="250.0" layoutY="504.0" mnemonicParsing="false" onAction="#GoMyProperties" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
         <font>
             <Font name="Consolas" size="22.0" />
         </font>

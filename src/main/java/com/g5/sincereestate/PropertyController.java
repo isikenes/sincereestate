@@ -57,7 +57,13 @@ public class PropertyController implements Initializable {
     @FXML
     void GoHomePage(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("homepage-scene.fxml"));
+            String name;
+            if(DatabaseCenter.switcher) {
+                name="homepage-scene.fxml";
+            } else{
+                name="my-properties-scene.fxml";
+            }
+            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource(name));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);

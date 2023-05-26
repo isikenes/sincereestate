@@ -6,6 +6,8 @@ public class DatabaseCenter {
 
     static Connection connection;
     static int selectedProperty;
+    static int signedUserID;
+    static boolean switcher;
 
     public static void ConnectToDB() {
         String host = "localhost";
@@ -28,13 +30,14 @@ public class DatabaseCenter {
     }
 
     public static boolean isLoginInfoTrue(String email, String password) {
-        String query = "SELECT user_email, user_password FROM users WHERE " +
+        String query = "SELECT user_email, user_password, user_id FROM users WHERE " +
                 "user_email='" + email + "' AND " +
                 "user_password='" + password + "'";
         try {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
+                signedUserID=rs.getInt("user_id");
                 return true;
             }
         } catch (SQLException e) {
@@ -155,6 +158,28 @@ public class DatabaseCenter {
         int a = 0;
         try {
             String sqlQuery = "SELECT property_id FROM properties WHERE property_status = '" + status + "' ORDER BY RAND() LIMIT 6";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+            while (resultSet.next()) {
+                int propertyId = resultSet.getInt("property_id");
+                indexes[a] = propertyId;
+                a++;
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return indexes;
+    }
+
+    public static int[] getMyProperties() {
+        int[] indexes = new int[6];
+        int a = 0;
+        try {
+            String sqlQuery = "SELECT property_id FROM properties WHERE owner_id = "+signedUserID;
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sqlQuery);
 

@@ -6,8 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.HomePageController">
-    <FlowPane prefHeight="500.0" prefWidth="800.0">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.MyPropertiesController">
+
+    <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#GoHomePage" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 2px; -fx-text-fill: #BBE1FA;" text="Back">
+        <font>
+            <Font name="Consolas" size="20.0" />
+        </font>
+    </Button>
+    <FlowPane layoutY="100.0" prefHeight="500.0" prefWidth="800.0">
         <Pane fx:id="pane1" onMouseClicked="#GoPropertyPage1" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
                 <Insets left="20.0" top="20.0" />
@@ -24,9 +30,9 @@
                 <font>
                     <Font name="Consolas" size="18.0" />
                 </font>
-            <padding>
-               <Insets right="4.0" />
-            </padding>
+                <padding>
+                    <Insets right="4.0" />
+                </padding>
             </Label>
             <Label fx:id="statusLabel1" alignment="CENTER_LEFT" layoutY="192.0" prefHeight="28.0" prefWidth="120.0" text="daily rent" textAlignment="CENTER" textFill="WHITE">
                 <font>
@@ -53,9 +59,9 @@
                 <font>
                     <Font name="Consolas" size="18.0" />
                 </font>
-            <padding>
-               <Insets right="4.0" />
-            </padding>
+                <padding>
+                    <Insets right="4.0" />
+                </padding>
             </Label>
             <Label fx:id="statusLabel2" alignment="CENTER_LEFT" layoutY="192.0" prefHeight="28.0" prefWidth="120.0" text="daily rent" textAlignment="CENTER" textFill="WHITE">
                 <font>
@@ -83,9 +89,9 @@
                 <font>
                     <Font name="Consolas" size="18.0" />
                 </font>
-            <padding>
-               <Insets right="4.0" />
-            </padding>
+                <padding>
+                    <Insets right="4.0" />
+                </padding>
             </Label>
             <Label fx:id="statusLabel3" alignment="CENTER_LEFT" layoutY="192.0" prefHeight="28.0" prefWidth="120.0" text="daily rent" textAlignment="CENTER" textFill="WHITE">
                 <font>
@@ -112,9 +118,9 @@
                 <font>
                     <Font name="Consolas" size="18.0" />
                 </font>
-            <padding>
-               <Insets right="4.0" />
-            </padding>
+                <padding>
+                    <Insets right="4.0" />
+                </padding>
             </Label>
             <Label fx:id="statusLabel4" alignment="CENTER_LEFT" layoutY="192.0" prefHeight="28.0" prefWidth="120.0" text="daily rent" textAlignment="CENTER" textFill="WHITE">
                 <font>
@@ -141,9 +147,9 @@
                 <font>
                     <Font name="Consolas" size="18.0" />
                 </font>
-            <padding>
-               <Insets right="4.0" />
-            </padding>
+                <padding>
+                    <Insets right="4.0" />
+                </padding>
             </Label>
             <Label fx:id="statusLabel5" alignment="CENTER_LEFT" layoutY="192.0" prefHeight="28.0" prefWidth="120.0" text="daily rent" textAlignment="CENTER" textFill="WHITE">
                 <font>
@@ -170,9 +176,9 @@
                 <font>
                     <Font name="Consolas" size="18.0" />
                 </font>
-            <padding>
-               <Insets right="4.0" />
-            </padding>
+                <padding>
+                    <Insets right="4.0" />
+                </padding>
             </Label>
             <Label fx:id="statusLabel6" alignment="CENTER_LEFT" layoutY="192.0" prefHeight="28.0" prefWidth="120.0" text="daily rent" textAlignment="CENTER" textFill="WHITE">
                 <font>
@@ -186,46 +192,14 @@
 
 
     </FlowPane>
-    <Button layoutX="50.0" layoutY="504.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
-        <font>
-            <Font name="Consolas" size="22.0" />
-        </font>
-      <graphic>
-          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-              <Image url="@images/refresh.png" />
-          </ImageView>
-      </graphic>
-    </Button>
-    <Button layoutX="150.0" layoutY="504.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
-        <font>
-            <Font name="Consolas" size="22.0" />
-        </font>
-        <graphic>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/plus.png" />
-            </ImageView>
-        </graphic>
-    </Button>
-    <Button layoutX="250.0" layoutY="504.0" mnemonicParsing="false" onAction="#GoMyProperties" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
-        <font>
-            <Font name="Consolas" size="22.0" />
-        </font>
-        <graphic>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/home.png" />
-            </ImageView>
-        </graphic>
-    </Button>
-    <Button layoutX="350.0" layoutY="504.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
-        <font>
-            <Font name="Consolas" size="22.0" />
-        </font>
-        <graphic>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@images/star.png" />
-            </ImageView>
-        </graphic>
-    </Button>
-   <ChoiceBox fx:id="filterBox" layoutX="550.0" layoutY="515.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-font-size: 20;" />
-
+   <Label fx:id="hiLabel" alignment="CENTER_RIGHT" layoutX="422.0" layoutY="20.0" prefHeight="41.0" prefWidth="351.0" text="Hi, Enes!">
+      <font>
+         <Font name="Consolas Bold" size="24.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="225.0" layoutY="67.0" prefHeight="41.0" prefWidth="351.0" text="Your Listings:">
+      <font>
+         <Font name="Consolas Bold" size="24.0" />
+      </font>
+   </Label>
 </AnchorPane>
