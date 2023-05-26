@@ -62,13 +62,13 @@ public class DatabaseCenter {
             return false;
         }
     }
-    public static boolean canCreateProperty(int ownerId,String propertyType,String propertyStatus,String adDate,String furnished,
+    public static boolean canCreateProperty(String propertyType,String propertyStatus,String adDate,String furnished,
                                         int numberOfRooms, int squaremeters,int buildingAge,String city,
                                         String street, int zip,int price,byte[] imageData){
         String query = "INSERT INTO properties (owner_id, property_type, property_status, ad_date, property_price, city, street, zip, furnished, number_of_rooms, building_age, squaremeters, image) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try{
             PreparedStatement statement=connection.prepareStatement(query);
-            statement.setInt(1, ownerId);
+            statement.setInt(1, signedUserID);
             statement.setString(2, propertyType);
             statement.setString(3, propertyStatus);
             statement.setString(4, adDate);
@@ -81,6 +81,7 @@ public class DatabaseCenter {
             statement.setInt(11,buildingAge);
             statement.setInt(12,squaremeters);
             statement.setBytes(13,imageData);
+            statement.executeUpdate();
             return true;
         }
         catch (SQLException e){

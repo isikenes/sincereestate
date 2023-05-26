@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.CreatingAdController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.CreatingAdController">
 
-    <Label alignment="CENTER" layoutX="132.0" layoutY="1.0" prefHeight="77.0" prefWidth="334.0" text="CREATE YOUR AD" textAlignment="CENTER">
+    <Label alignment="CENTER" layoutX="120.0" layoutY="13.0" prefHeight="55.0" prefWidth="666.0" text="CREATE YOUR AD" textAlignment="CENTER">
         <font>
             <Font name="Consolas Bold" size="36.0" />
         </font>
@@ -103,12 +103,12 @@
     <ChoiceBox fx:id="statusBox" layoutX="521.0" layoutY="120.0" prefHeight="32.0" prefWidth="193.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-font-size: 12;" />
     <ChoiceBox fx:id="furnishedBox" layoutX="521" layoutY="163" prefHeight="32.0" prefWidth="193.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-font-size: 12;" />
     <ChoiceBox fx:id="roomsBox" layoutX="521" layoutY="206" prefHeight="32.0" prefWidth="193.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-font-size: 12;" />
-    <ImageView fx:id="propertyImage" onMouseClicked="#addImage" fitHeight="272.0" fitWidth="249.0" layoutX="32.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="propertyImage" fitHeight="250.0" fitWidth="250.0" layoutX="32.0" layoutY="126.0" onMouseClicked="#addImage" pickOnBounds="true">
         <image>
             <Image url="@images/addimage.png" />
         </image>
     </ImageView>
-    <Button layoutX="299.0" layoutY="531.0" mnemonicParsing="false" onAction="#createAd" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Create Ad">
+    <Button layoutX="300.0" layoutY="531.0" mnemonicParsing="false" onAction="#createAd" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Create Ad">
         <font>
             <Font name="Consolas" size="26.0" />
         </font>

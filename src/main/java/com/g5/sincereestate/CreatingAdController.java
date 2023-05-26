@@ -98,6 +98,7 @@ public class CreatingAdController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
     @FXML
     public void createAd(ActionEvent event){
 
@@ -105,7 +106,15 @@ public class CreatingAdController implements Initializable {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String currentTime=now.format(formatter);
 
-        if(DatabaseCenter.canCreateProperty(ownerID,typeBox.getValue(),statusBox.getValue(),currentTime,furnishedBox.getValue(),
+        if(squaremetersField.getText().isEmpty() || buildingAgeField.getText().isEmpty() || cityField.getText().isEmpty()
+                || streetField.getText().isEmpty() || zipField.getText().isEmpty() || priceField.getText().isEmpty()) {
+            Alert alert=new Alert(Alert.AlertType.WARNING);
+            alert.setContentText("Fill in the blanks!");
+            alert.show();
+            return;
+        }
+
+        if(DatabaseCenter.canCreateProperty(typeBox.getValue(),statusBox.getValue(),currentTime,furnishedBox.getValue(),
                 roomsBox.getValue(),Integer.parseInt(squaremetersField.getText()),Integer.parseInt(buildingAgeField.getText()),cityField.getText(),streetField.getText(),
                 Integer.parseInt(zipField.getText()),Integer.parseInt(priceField.getText()),imageData)) {
             GoMyProperties(event);
