@@ -14,7 +14,7 @@ public class DatabaseCenter {
         String user = "root";
         String password = "12345678";
 
-        String url="jdbc:mysql://"+ host +":"+ port +"/"+ dbName;
+        String url = "jdbc:mysql://" + host + ":" + port + "/" + dbName;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -28,12 +28,12 @@ public class DatabaseCenter {
     }
 
     public static boolean isLoginInfoTrue(String email, String password) {
-        String query="SELECT user_email, user_password FROM users WHERE " +
-                "user_email='"+email+"' AND " +
-                "user_password='"+password+"'";
+        String query = "SELECT user_email, user_password FROM users WHERE " +
+                "user_email='" + email + "' AND " +
+                "user_password='" + password + "'";
         try {
-            Statement statement=connection.createStatement();
-            ResultSet rs= statement.executeQuery(query);
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
             while (rs.next()) {
                 return true;
             }
@@ -44,15 +44,15 @@ public class DatabaseCenter {
     }
 
     public static boolean canCreateUser(String firstName, String lastName, String email, String password, String phone, String birthdate) {
-        String query="INSERT INTO users (first_name, last_name, user_email, user_password, phone_number, birth_date) VALUES(?,?,?,?,?,?)";
+        String query = "INSERT INTO users (first_name, last_name, user_email, user_password, phone_number, birth_date) VALUES(?,?,?,?,?,?)";
         try {
-            PreparedStatement statement=connection.prepareStatement(query);
-            statement.setString(1,firstName);
-            statement.setString(2,lastName);
-            statement.setString(3,email);
-            statement.setString(4,password);
-            statement.setString(5,phone);
-            statement.setString(6,birthdate);
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, firstName);
+            statement.setString(2, lastName);
+            statement.setString(3, email);
+            statement.setString(4, password);
+            statement.setString(5, phone);
+            statement.setString(6, birthdate);
             statement.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -60,8 +60,8 @@ public class DatabaseCenter {
         }
     }
 
-    public static byte[] getImage(int property_id){
-        String query="SELECT image FROM properties WHERE property_id = ?";
+    public static byte[] getImage(int property_id) {
+        String query = "SELECT image FROM properties WHERE property_id = ?";
         try {
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1, property_id);
@@ -82,13 +82,13 @@ public class DatabaseCenter {
 
     }
 
-    public static void setImage(int property_id, byte[] image_data){
-        String query="UPDATE properties SET image = ? WHERE property_id = ?";
+    public static void setImage(int property_id, byte[] image_data) {
+        String query = "UPDATE properties SET image = ? WHERE property_id = ?";
         try {
-            PreparedStatement preparedStatement=connection.prepareStatement(query);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
 
-            preparedStatement.setBytes(1,image_data);
-            preparedStatement.setInt(2,property_id);
+            preparedStatement.setBytes(1, image_data);
+            preparedStatement.setInt(2, property_id);
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException e) {
@@ -97,9 +97,9 @@ public class DatabaseCenter {
     }
 
     public static String getPropertyType(int id) {
-        String query="SELECT property_type FROM properties WHERE property_id = "+id;
+        String query = "SELECT property_type FROM properties WHERE property_id = " + id;
         try {
-            Statement statement=connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
@@ -113,9 +113,9 @@ public class DatabaseCenter {
     }
 
     public static String getPropertyPrice(int id) {
-        String query="SELECT property_price FROM properties WHERE property_id = "+id;
+        String query = "SELECT property_price FROM properties WHERE property_id = " + id;
         try {
-            Statement statement=connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
@@ -129,9 +129,9 @@ public class DatabaseCenter {
     }
 
     public static String getPropertyStatus(int id) {
-        String query="SELECT property_status FROM properties WHERE property_id = "+id;
+        String query = "SELECT property_status FROM properties WHERE property_id = " + id;
         try {
-            Statement statement=connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
@@ -144,10 +144,11 @@ public class DatabaseCenter {
             throw new RuntimeException(e);
         }
     }
+
     public static String getAdDate(int id) {
-        String query="SELECT ad_date FROM properties WHERE property_id = "+id;
+        String query = "SELECT ad_date FROM properties WHERE property_id = " + id;
         try {
-            Statement statement=connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
@@ -159,14 +160,14 @@ public class DatabaseCenter {
             throw new RuntimeException(e);
         }
     }
-    public static String getCity(int id) {
-        String query="SELECT city FROM properties WHERE property_id = "+id;
+    public static String getData(String tableName,String columnName ,int id) {
+        String query = "SELECT " +columnName + " FROM "+tableName+" WHERE property_id = " + id;
         try {
-            Statement statement=connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
-                return rs.getString("city");
+                return rs.getString(columnName);
             } else {
                 return null;
             }
@@ -174,120 +175,31 @@ public class DatabaseCenter {
             throw new RuntimeException(e);
         }
     }
-    public static String getStreet(int id) {
-        String query="SELECT street FROM properties WHERE property_id = "+id;
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
 
-            if (rs.next()) {
-                return rs.getString("street");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public static String getZip(int id) {
-        String query="SELECT zip FROM properties WHERE property_id = "+id;
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("zip");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public static String getFurnished(int id) {
-        String query="SELECT furnished FROM properties WHERE property_id = "+id;
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("furnished");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public static String getNumberOfRooms(int id) {
-        String query="SELECT number_of_rooms FROM properties WHERE property_id = "+id;
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("number_of_rooms");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public static String getBuildingAge(int id) {
-        String query="SELECT building_age FROM properties WHERE property_id = "+id;
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("building_age");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public static String getSquareMeters(int id) {
-        String query="SELECT squaremeters FROM properties WHERE property_id = "+id;
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("squaremeters");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
     public static int getOwnerID(int id) {
-        String query="SELECT owner_id FROM properties WHERE property_id = "+id;
+        String query = "SELECT owner_id FROM properties WHERE property_id = " + id;
         try {
-            Statement statement=connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
                 return rs.getInt("owner_id");
-            }
-            else {
+            } else {
                 return -1;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
     public static String getOwnerFullName(int id) {
-        String query="SELECT first_name,last_name FROM users WHERE user_id = "+id;
+        String query = "SELECT first_name,last_name FROM users WHERE user_id = " + id;
         try {
-            Statement statement=connection.createStatement();
+            Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
-                return rs.getString("first_name")+" "+rs.getString("last_name");
+                return rs.getString("first_name") + " " + rs.getString("last_name");
             } else {
                 return null;
             }
@@ -295,6 +207,8 @@ public class DatabaseCenter {
             throw new RuntimeException(e);
         }
     }
+
+
     public static String getOwnerPhoneNumber(int id) {
         String query="SELECT phone_number FROM users WHERE user_id = "+id;
         try {
