@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class PropertyController implements Initializable {
-    private  int selectedProperty=DatabaseCenter.selectedProperty;
+    private int selectedProperty = DatabaseCenter.selectedProperty;
     @FXML
     private Label adDateLabel;
 
@@ -59,7 +59,7 @@ public class PropertyController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("homepage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage=(Stage)((Node)event.getSource()).getScene().getWindow();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
 
         } catch (IOException e) {
@@ -70,33 +70,30 @@ public class PropertyController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        int owner_id= DatabaseCenter.getOwnerID(selectedProperty);
-        String propertiesTableName="properties";
+        adDateLabel.setText("Ad Date: " + DatabaseCenter.getPropertyData("ad_date", selectedProperty));
 
+        addressLabel.setText("Address: " + DatabaseCenter.getPropertyData("street", selectedProperty) + " street, "
+                + DatabaseCenter.getPropertyData("city", selectedProperty) + ", "
+                + DatabaseCenter.getPropertyData("zip", selectedProperty));
 
-
-        adDateLabel.setText("Ad Date: " + DatabaseCenter.getData(propertiesTableName,"ad_date",selectedProperty));
-
-        addressLabel.setText("Address: "+DatabaseCenter.getData(propertiesTableName,"city",selectedProperty)
-                +" "+DatabaseCenter.getData(propertiesTableName,"street",selectedProperty)+" "
-                + DatabaseCenter.getData(propertiesTableName,"zip",selectedProperty));
-
-        buildingAgeLabel.setText("Building Age: "+DatabaseCenter.getData(propertiesTableName,"building_age",selectedProperty));
-        furnishedLabel.setText("Furnished: "+DatabaseCenter.getData(propertiesTableName,"furnished",selectedProperty));
+        buildingAgeLabel.setText("Building Age: " + DatabaseCenter.getPropertyData("building_age", selectedProperty));
+        furnishedLabel.setText("Furnished: " + DatabaseCenter.getPropertyData("furnished", selectedProperty));
         Image image;
-        if(DatabaseCenter.getImage(selectedProperty)==null) {
-            image=new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
-        } else{
-            image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(selectedProperty)));
+        if (DatabaseCenter.getImage(selectedProperty) == null) {
+            image = new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
+        } else {
+            image = new Image(new ByteArrayInputStream(DatabaseCenter.getImage(selectedProperty)));
         }
         propertyImage.setImage(image);
-        ownernameLabel.setText(DatabaseCenter.getOwnerFullName(owner_id));
-        ownerPhoneNumberLabel.setText(DatabaseCenter.getOwnerPhoneNumber(owner_id));
 
-        propertyPriceLabel.setText(DatabaseCenter.getData(propertiesTableName,"property_price",selectedProperty)+"$");
-        roomLabel.setText("Number Of Rooms: "+DatabaseCenter.getData(propertiesTableName,"number_of_rooms",selectedProperty));
-        squarametersLabel.setText("m²: "+DatabaseCenter.getData(propertiesTableName,"squaremeters",selectedProperty));
-        statusLabel.setText("Status: "+DatabaseCenter.getData("properties","property_status",selectedProperty));
-        typeLabel.setText("Type: "+DatabaseCenter.getData("properties","property_type",selectedProperty));
+        int owner_id = Integer.parseInt(DatabaseCenter.getPropertyData("owner_id", selectedProperty));
+        ownernameLabel.setText(DatabaseCenter.getUserData("first_name", owner_id) + " " + DatabaseCenter.getUserData("last_name", owner_id));
+        ownerPhoneNumberLabel.setText("+" + DatabaseCenter.getUserData("phone_number", owner_id));
+
+        propertyPriceLabel.setText(DatabaseCenter.getPropertyData("property_price", selectedProperty) + "$");
+        roomLabel.setText("Number Of Rooms: " + DatabaseCenter.getPropertyData("number_of_rooms", selectedProperty));
+        squarametersLabel.setText("m²: " + DatabaseCenter.getPropertyData("squaremeters", selectedProperty));
+        statusLabel.setText("Status: " + DatabaseCenter.getPropertyData("property_status", selectedProperty));
+        typeLabel.setText("Type: " + DatabaseCenter.getPropertyData("property_type", selectedProperty));
     }
 }

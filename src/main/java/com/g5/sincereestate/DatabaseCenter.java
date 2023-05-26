@@ -96,58 +96,8 @@ public class DatabaseCenter {
         }
     }
 
-    public static String getPropertyType(int id) {
-        String query = "SELECT property_type FROM properties WHERE property_id = " + id;
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("property_type");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static String getPropertyPrice(int id) {
-        String query = "SELECT property_price FROM properties WHERE property_id = " + id;
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("property_price");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static String getPropertyStatus(int id) {
-        String query = "SELECT property_status FROM properties WHERE property_id = " + id;
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("property_status");
-            } else {
-                return null;
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-    public static String getData(String tableName,String columnName ,int id) {
-        String query = "SELECT " +columnName + " FROM "+tableName+" WHERE property_id = " + id;
+    public static String getPropertyData(String columnName, int id) {
+        String query = "SELECT " + columnName + " FROM properties WHERE property_id = " + id;
         try {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -162,30 +112,14 @@ public class DatabaseCenter {
         }
     }
 
-    public static int getOwnerID(int id) {
-        String query = "SELECT owner_id FROM properties WHERE property_id = " + id;
+    public static String getUserData(String columnName, int id) {
+        String query = "SELECT " + columnName + " FROM users WHERE user_id = " + id;
         try {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
             if (rs.next()) {
-                return rs.getInt("owner_id");
-            } else {
-                return -1;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static String getOwnerFullName(int id) {
-        String query = "SELECT first_name,last_name FROM users WHERE user_id = " + id;
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("first_name") + " " + rs.getString("last_name");
+                return rs.getString(columnName);
             } else {
                 return null;
             }
@@ -194,35 +128,17 @@ public class DatabaseCenter {
         }
     }
 
-
-    public static String getOwnerPhoneNumber(int id) {
-        String query="SELECT phone_number FROM users WHERE user_id = "+id;
+    public static int[] getRandomProperties() {
+        int[] indexes = new int[6];
+        int a = 0;
         try {
-            Statement statement=connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            if (rs.next()) {
-                return rs.getString("phone_number");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-    public static int[] getRandomPropertiesForSale() {
-        int[] indexes=new int[6];
-        int a=0;
-        try {
-            String sqlQuery = "SELECT property_id FROM properties WHERE property_status = 'for sale' ORDER BY RAND() LIMIT 6";
+            String sqlQuery = "SELECT property_id FROM properties ORDER BY RAND() LIMIT 6";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sqlQuery);
 
             while (resultSet.next()) {
                 int propertyId = resultSet.getInt("property_id");
-                indexes[a]=propertyId;
+                indexes[a] = propertyId;
                 a++;
             }
 
@@ -234,17 +150,17 @@ public class DatabaseCenter {
         return indexes;
     }
 
-    public static int[] getRandomPropertiesForRent() {
-        int[] indexes=new int[6];
-        int a=0;
+    public static int[] getRandomPropertiesByFilter(String status) {
+        int[] indexes = new int[6];
+        int a = 0;
         try {
-            String sqlQuery = "SELECT property_id FROM properties WHERE property_status = 'for rent' ORDER BY RAND() LIMIT 6";
+            String sqlQuery = "SELECT property_id FROM properties WHERE property_status = '" + status + "' ORDER BY RAND() LIMIT 6";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sqlQuery);
 
             while (resultSet.next()) {
                 int propertyId = resultSet.getInt("property_id");
-                indexes[a]=propertyId;
+                indexes[a] = propertyId;
                 a++;
             }
 
@@ -255,27 +171,4 @@ public class DatabaseCenter {
         }
         return indexes;
     }
-
-    public static int[] getRandomPropertiesDailyRent() {
-        int[] indexes=new int[6];
-        int a=0;
-        try {
-            String sqlQuery = "SELECT property_id FROM properties WHERE property_status = 'daily rent' ORDER BY RAND() LIMIT 6";
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
-
-            while (resultSet.next()) {
-                int propertyId = resultSet.getInt("property_id");
-                indexes[a]=propertyId;
-                a++;
-            }
-
-            resultSet.close();
-            statement.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return indexes;
-    }
-
 }

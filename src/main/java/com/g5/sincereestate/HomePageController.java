@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -12,12 +11,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import org.w3c.dom.events.MouseEvent;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Ref;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
@@ -103,18 +100,19 @@ public class HomePageController implements Initializable {
         filterBox.setValue("Filter");
         filterBox.getItems().addAll("for sale", "for rent", "daily rent");
         filterBox.setOnAction(this::filterStatus);
+        pane6.setVisible(false);
     }
 
     public void Refresh() {
 
         if(mode==0) {
-            indexes=new int[]{(int)(Math.random()*5000),(int)(Math.random()*5000),(int)(Math.random()*5000),(int)(Math.random()*5000),(int)(Math.random()*5000),(int)(Math.random()*5000)};
+            indexes=DatabaseCenter.getRandomProperties();
         } else if(mode==1) {
-            indexes=DatabaseCenter.getRandomPropertiesForSale();
+            indexes=DatabaseCenter.getRandomPropertiesByFilter("for sale");
         } else if(mode==2) {
-            indexes=DatabaseCenter.getRandomPropertiesForRent();
+            indexes=DatabaseCenter.getRandomPropertiesByFilter("for rent");
         } else if(mode==3) {
-            indexes=DatabaseCenter.getRandomPropertiesDailyRent();
+            indexes=DatabaseCenter.getRandomPropertiesByFilter("daily rent");
         }
 
         ImageView[] imageViews= new ImageView[] {image1, image2, image3, image4, image5, image6};
@@ -129,11 +127,11 @@ public class HomePageController implements Initializable {
             } else{
                 image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(indexes[i])));
             }
-            image1.setImage(image);
 
-            typeLabels[i].setText(DatabaseCenter.getPropertyType(indexes[i]));
-            priceLabels[i].setText(DatabaseCenter.getPropertyPrice(indexes[i])+"$");
-            statusLabels[i].setText(DatabaseCenter.getPropertyStatus(indexes[i]));
+            imageViews[i].setImage(image);
+            typeLabels[i].setText(DatabaseCenter.getPropertyData("property_type",indexes[i]));
+            priceLabels[i].setText(DatabaseCenter.getPropertyData("property_price",indexes[i])+"$");
+            statusLabels[i].setText(DatabaseCenter.getPropertyData("property_status",indexes[i]));
         }
     }
 
@@ -150,6 +148,7 @@ public class HomePageController implements Initializable {
             Refresh();
         }
     }
+
     public void GoPropertyPage1(){
         DatabaseCenter.selectedProperty=indexes[0];
         try {
