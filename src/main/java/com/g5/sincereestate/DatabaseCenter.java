@@ -145,21 +145,7 @@ public class DatabaseCenter {
         }
     }
 
-    public static String getAdDate(int id) {
-        String query = "SELECT ad_date FROM properties WHERE property_id = " + id;
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
 
-            if (rs.next()) {
-                return rs.getString("ad_date");
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
     public static String getData(String tableName,String columnName ,int id) {
         String query = "SELECT " +columnName + " FROM "+tableName+" WHERE property_id = " + id;
         try {
