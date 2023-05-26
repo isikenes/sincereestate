@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2195315b-8747-4b43-ab9d-e13d6e5bb5a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/MyPropertiesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/images/addimage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/CreatingAdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/CreatingAdController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/DatabaseCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/DatabaseCenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/PropertyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/creatingAd-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/creatingad-scene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/PropertyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/CreatingAdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/CreatingAdController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/DatabaseCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/DatabaseCenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/HomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/HomePageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/creatingAd-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/creatingAd-scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/homepage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/homepage-scene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/g5/sincereestate" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Binbariyon\Documents\GitHub\sincereestate\src\main\resources\com\g5\sincereestate\images" />
+      <recent name="C:\Users\Binbariyon\Documents\GitHub\sincereestate\src\main\resources\com\g5\sincereestate" />
+      <recent name="C:\Users\Binbariyon\Documents\GitHub\sincereestate\src\main\java\com\g5\sincereestate" />
       <recent name="C:\Users\isikenes\IdeaProjects\Sincere Estate\src\main\resources\com\g5\sincereestate\images" />
       <recent name="C:\Users\isikenes\IdeaProjects\Sincere Estate\src\main\resources\com\g5\sincereestate" />
     </key>
@@ -110,6 +124,8 @@
       <workItem from="1685024777710" duration="304000" />
       <workItem from="1685084321230" duration="4457000" />
       <workItem from="1685089711301" duration="8934000" />
+      <workItem from="1685100013886" duration="7777000" />
+      <workItem from="1685107816510" duration="1473000" />
     </task>
     <servers />
   </component>

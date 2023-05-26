@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -148,12 +149,23 @@ public class HomePageController implements Initializable {
             Refresh();
         }
     }
+    public void GoCreateAd(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("creatingad-scene.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
 
-    public void GoMyProperties(){
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void GoMyProperties(ActionEvent event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("my-properties-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) pane1.getScene().getWindow();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
 
         } catch (IOException e) {
