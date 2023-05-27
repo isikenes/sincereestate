@@ -6,9 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.ByteArrayInputStream;
@@ -17,7 +20,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class PropertyController implements Initializable {
+
     private int selectedProperty = DatabaseCenter.selectedProperty;
+
+    @FXML
+    private Button favoriteButton;
     @FXML
     private Label adDateLabel;
 
@@ -55,27 +62,65 @@ public class PropertyController implements Initializable {
     private Label typeLabel;
 
     @FXML
-    void GoHomePage(ActionEvent event) {
+    void GoBack(ActionEvent event) {
         try {
-            String name;
-            if(DatabaseCenter.switcher) {
-                name="homepage-scene.fxml";
-            } else{
-                name="my-properties-scene.fxml";
+            String name = "";
+            switch (DatabaseCenter.scene) {
+                case 0:
+                    name = "homepage-scene.fxml";
+                    break;
+                case 1:
+                    name = "my-properties-scene.fxml";
+                    break;
+                case 2:
+                    name = "favorites-scene.fxml";
+                    break;
             }
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource(name));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    @FXML
+    void addFavorites(ActionEvent event) {
+        if (DatabaseCenter.scene == 0) {
+
+            if (DatabaseCenter.canCreateFavorite(DatabaseCenter.signedUserID, selectedProperty)) {
+                favoriteButton.setText("Added to Favorites");
+                favoriteButton.setDisable(true);
+                return;
+            } else {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setContentText("This is your property!");
+                alert.show();
+            }
+        } else if (DatabaseCenter.scene == 1) {
+            DatabaseCenter.deleteProperty();
+            GoBack(event);
+        } else if (DatabaseCenter.scene == 2) {
+            DatabaseCenter.deleteFavorite(DatabaseCenter.signedUserID, selectedProperty);
+            GoBack(event);
+        }
+
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        if (DatabaseCenter.scene == 0) {
+            favoriteButton.setText("Add to Favorites");
+
+        } else if (DatabaseCenter.scene == 1) {
+            favoriteButton.setText("Delete Property");
+
+        } else if (DatabaseCenter.scene == 2) {
+            favoriteButton.setText("Remove from favorites");
+
+        }
         adDateLabel.setText("Ad Date: " + DatabaseCenter.getPropertyData("ad_date", selectedProperty));
 
         addressLabel.setText("Address: " + DatabaseCenter.getPropertyData("street", selectedProperty) + " street, "

@@ -101,7 +101,7 @@ public class HomePageController implements Initializable {
         filterBox.setValue("Filter");
         filterBox.getItems().addAll("for sale", "for rent", "daily rent");
         filterBox.setOnAction(this::filterStatus);
-        DatabaseCenter.switcher=true;
+        DatabaseCenter.scene=0;
     }
 
     public void Refresh() {
@@ -149,24 +149,44 @@ public class HomePageController implements Initializable {
             Refresh();
         }
     }
+    public void LogOut(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("main-scene.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            SincereEstateApplication.stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void GoCreateAd(ActionEvent event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("creatingad-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    public void GoFavorites(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("favorites-scene.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            SincereEstateApplication.stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     public void GoMyProperties(ActionEvent event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("my-properties-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -178,8 +198,7 @@ public class HomePageController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) pane1.getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -190,8 +209,7 @@ public class HomePageController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) pane2.getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -202,8 +220,7 @@ public class HomePageController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) pane3.getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -214,8 +231,7 @@ public class HomePageController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) pane4.getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -226,8 +242,7 @@ public class HomePageController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) pane5.getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -238,8 +253,7 @@ public class HomePageController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) pane6.getScene().getWindow();
-            stage.setScene(scene);
+            SincereEstateApplication.stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();

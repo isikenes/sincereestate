@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.HomePageController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.HomePageController">
     <FlowPane prefHeight="500.0" prefWidth="800.0">
         <Pane fx:id="pane1" onMouseClicked="#GoPropertyPage1" prefHeight="220.0" prefWidth="240.0" style="-fx-border-color: #1b262c; -fx-border-width: 4px; -fx-background-color: #0f4c75;">
             <FlowPane.margin>
@@ -186,7 +186,20 @@
 
 
     </FlowPane>
-    <Button layoutX="50.0" layoutY="504.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
+    <Button layoutX="20.0" layoutY="504.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
+        <font>
+            <Font name="Consolas" size="22.0" />
+        </font>
+        <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@images/exit.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+
+    <Button layoutX="120" layoutY="504.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
         <font>
             <Font name="Consolas" size="22.0" />
         </font>
@@ -196,7 +209,7 @@
           </ImageView>
       </graphic>
     </Button>
-    <Button layoutX="150.0" layoutY="504.0" mnemonicParsing="false" onAction="#GoCreateAd" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
+    <Button layoutX="220" layoutY="504.0" mnemonicParsing="false" onAction="#GoCreateAd" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
         <font>
             <Font name="Consolas" size="22.0" />
         </font>
@@ -206,7 +219,7 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button layoutX="250.0" layoutY="504.0" mnemonicParsing="false" onAction="#GoMyProperties" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
+    <Button layoutX="320" layoutY="504.0" mnemonicParsing="false" onAction="#GoMyProperties" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
         <font>
             <Font name="Consolas" size="22.0" />
         </font>
@@ -216,7 +229,7 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button layoutX="350.0" layoutY="504.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
+    <Button layoutX="420" layoutY="504.0" mnemonicParsing="false" onAction="#GoFavorites" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
         <font>
             <Font name="Consolas" size="22.0" />
         </font>

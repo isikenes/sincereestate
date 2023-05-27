@@ -7,7 +7,7 @@ public class DatabaseCenter {
     static Connection connection;
     static int selectedProperty;
     static int signedUserID;
-    static boolean switcher;
+    static int scene;
 
     public static void ConnectToDB() {
         String host = "localhost";
@@ -44,6 +44,19 @@ public class DatabaseCenter {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public static boolean canCreateFavorite(int userId,int propertyId) {
+        String query = "INSERT INTO favorites VALUES(?,?)";
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, userId);
+            statement.setInt(2, propertyId);
+            statement.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
     }
 
     public static boolean canCreateUser(String firstName, String lastName, String email, String password, String phone, String birthdate) {
@@ -86,6 +99,28 @@ public class DatabaseCenter {
         }
         catch (SQLException e){
             return false;
+        }
+    }
+    public static void deleteFavorite(int userID,int propertyID){
+        String query="DELETE FROM favorites WHERE user_id= ? AND property_id= ?";
+        try {
+            PreparedStatement statement=connection.prepareStatement(query);
+            statement.setInt(1,userID);
+            statement.setInt(2,propertyID);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void deleteProperty(){
+        String query="DELETE FROM properties WHERE property_id= ?";
+        try {
+            PreparedStatement statement=connection.prepareStatement(query);
+            statement.setInt(1,selectedProperty);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -210,8 +245,7 @@ public class DatabaseCenter {
             String sqlQuery = "SELECT property_id FROM properties WHERE owner_id = "+signedUserID;
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sqlQuery);
-
-            while (resultSet.next()) {
+            while (resultSet.next() && a<=5) {
                 int propertyId = resultSet.getInt("property_id");
                 indexes[a] = propertyId;
                 a++;
@@ -224,4 +258,28 @@ public class DatabaseCenter {
         }
         return indexes;
     }
+
+    public static int[] getMyFavorites() {
+        int[] indexes = new int[6];
+        int a = 0;
+        try {
+            String sqlQuery = "SELECT property_id FROM favorites WHERE user_id = " + signedUserID;
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+            while (resultSet.next() && a<=5) {
+                int propertyId = resultSet.getInt("property_id");
+                indexes[a] = propertyId;
+                a++;
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return indexes;
+    }
+
 }
+

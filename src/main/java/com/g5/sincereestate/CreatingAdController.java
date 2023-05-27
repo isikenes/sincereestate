@@ -64,9 +64,7 @@ public class CreatingAdController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("homepage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-
+            SincereEstateApplication.stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }

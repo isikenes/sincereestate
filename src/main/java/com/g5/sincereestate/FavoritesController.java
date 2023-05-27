@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -17,79 +18,100 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MyPropertiesController implements Initializable {
+public class FavoritesController implements Initializable {
 
     @FXML
-    Pane pane1;
-    @FXML
-    Pane pane2;
-    @FXML
-    Pane pane3;
-    @FXML
-    Pane pane4;
-    @FXML
-    Pane pane5;
-    @FXML
-    Pane pane6;
-    @FXML
-    ImageView image1;
-    @FXML
-    ImageView image2;
-    @FXML
-    ImageView image3;
-    @FXML
-    ImageView image4;
-    @FXML
-    ImageView image5;
-    @FXML
-    ImageView image6;
+    private Label hiLabel;
 
     @FXML
-    Label typeLabel1;
-    @FXML
-    Label typeLabel2;
-    @FXML
-    Label typeLabel3;
-    @FXML
-    Label typeLabel4;
-    @FXML
-    Label typeLabel5;
-    @FXML
-    Label typeLabel6;
+    private ImageView image1;
 
     @FXML
-    Label priceLabel1;
-    @FXML
-    Label priceLabel2;
-    @FXML
-    Label priceLabel3;
-    @FXML
-    Label priceLabel4;
-    @FXML
-    Label priceLabel5;
-    @FXML
-    Label priceLabel6;
+    private ImageView image2;
 
     @FXML
-    Label statusLabel1;
+    private ImageView image3;
 
     @FXML
-    Label statusLabel2;
+    private ImageView image4;
 
     @FXML
-    Label statusLabel3;
+    private ImageView image5;
 
     @FXML
-    Label statusLabel4;
+    private ImageView image6;
 
     @FXML
-    Label statusLabel5;
+    private Pane pane1;
 
     @FXML
-    Label statusLabel6;
+    private Pane pane2;
 
     @FXML
-    Label hiLabel;
+    private Pane pane3;
+
+    @FXML
+    private Pane pane4;
+
+    @FXML
+    private Pane pane5;
+
+    @FXML
+    private Pane pane6;
+
+    @FXML
+    private Label priceLabel1;
+
+    @FXML
+    private Label priceLabel2;
+
+    @FXML
+    private Label priceLabel3;
+
+    @FXML
+    private Label priceLabel4;
+
+    @FXML
+    private Label priceLabel5;
+
+    @FXML
+    private Label priceLabel6;
+
+    @FXML
+    private Label statusLabel1;
+
+    @FXML
+    private Label statusLabel2;
+
+    @FXML
+    private Label statusLabel3;
+
+    @FXML
+    private Label statusLabel4;
+
+    @FXML
+    private Label statusLabel5;
+
+    @FXML
+    private Label statusLabel6;
+
+    @FXML
+    private Label typeLabel1;
+
+    @FXML
+    private Label typeLabel2;
+
+    @FXML
+    private Label typeLabel3;
+
+    @FXML
+    private Label typeLabel4;
+
+    @FXML
+    private Label typeLabel5;
+
+    @FXML
+    private Label typeLabel6;
 
     private int[] indexes;
 
@@ -98,19 +120,20 @@ public class MyPropertiesController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("homepage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            SincereEstateApplication.stage.setScene(scene);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+
     public void GoPropertyPage1(){
         DatabaseCenter.selectedProperty=indexes[0];
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-
 
             SincereEstateApplication.stage.setScene(scene);
 
@@ -125,7 +148,8 @@ public class MyPropertiesController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
 
-            SincereEstateApplication.stage.setScene(scene);
+            Stage stage = (Stage) pane2.getScene().getWindow();
+            stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -138,7 +162,8 @@ public class MyPropertiesController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
 
-            SincereEstateApplication.stage.setScene(scene);
+            Stage stage = (Stage) pane3.getScene().getWindow();
+            stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -151,7 +176,8 @@ public class MyPropertiesController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
 
-            SincereEstateApplication.stage.setScene(scene);
+            Stage stage = (Stage) pane4.getScene().getWindow();
+            stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -164,7 +190,8 @@ public class MyPropertiesController implements Initializable {
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
 
-            SincereEstateApplication.stage.setScene(scene);
+            Stage stage = (Stage) pane5.getScene().getWindow();
+            stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -175,7 +202,8 @@ public class MyPropertiesController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("propertypage-scene.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            SincereEstateApplication.stage.setScene(scene);
+            Stage stage = (Stage) pane6.getScene().getWindow();
+            stage.setScene(scene);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -184,8 +212,8 @@ public class MyPropertiesController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        int ownerID=DatabaseCenter.signedUserID;
-        indexes=DatabaseCenter.getMyProperties();
+        int signedId=DatabaseCenter.signedUserID;
+        indexes=DatabaseCenter.getMyFavorites();
         Pane[] panes=new Pane[] {pane1,pane2,pane3,pane4,pane5,pane6};
 
 
@@ -193,15 +221,13 @@ public class MyPropertiesController implements Initializable {
         Label[] typeLabels=new Label[] {typeLabel1,typeLabel2, typeLabel3, typeLabel4, typeLabel5,typeLabel6};
         Label[] priceLabels=new Label[] {priceLabel1,priceLabel2,priceLabel3,priceLabel4,priceLabel5,priceLabel6};
         Label[] statusLabels=new Label[] {statusLabel1, statusLabel2, statusLabel3, statusLabel4, statusLabel5, statusLabel6};
-
-        for(int i=0;i<indexes.length;i++) {
+        for (int i=0;i<indexes.length;i++){
             Image image;
             if(DatabaseCenter.getImage(indexes[i])==null) {
                 image=new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
             } else{
                 image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(indexes[i])));
             }
-
             imageViews[i].setImage(image);
             typeLabels[i].setText(DatabaseCenter.getPropertyData("property_type",indexes[i]));
             priceLabels[i].setText(DatabaseCenter.getPropertyData("property_price",indexes[i])+"$");
@@ -210,7 +236,9 @@ public class MyPropertiesController implements Initializable {
                 panes[i].setVisible(false);
             }
         }
-        hiLabel.setText("Hi, "+DatabaseCenter.getUserData("first_name",ownerID)+" "+DatabaseCenter.getUserData("last_name",ownerID)+"!");
-        DatabaseCenter.scene=1;
+        hiLabel.setText("Hi, "+DatabaseCenter.getUserData("first_name",signedId)+" "+DatabaseCenter.getUserData("last_name",signedId)+"!");
+        DatabaseCenter.scene=2;
+
     }
 }
+
