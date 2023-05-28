@@ -101,6 +101,32 @@ public class DatabaseCenter {
             return false;
         }
     }
+
+    public static boolean canUpdateProperty(String propertyType,String propertyStatus,String furnished,
+                                            int numberOfRooms, int squaremeters,int buildingAge,String city,
+                                            String street, int zip,int price,byte[] imageData){
+        String query = "UPDATE properties SET property_type = ?, property_status=?, property_price=?, city=?, street=?, zip=?, furnished=?, number_of_rooms=?, building_age=?, squaremeters=?, image=? WHERE property_id="+selectedProperty;
+        try{
+            PreparedStatement statement=connection.prepareStatement(query);
+            statement.setString(1, propertyType);
+            statement.setString(2, propertyStatus);
+            statement.setInt(3,price);
+            statement.setString(4, city);
+            statement.setString(5, street);
+            statement.setInt(6,zip);
+            statement.setString(7,furnished);
+            statement.setInt(8,numberOfRooms);
+            statement.setInt(9,buildingAge);
+            statement.setInt(10,squaremeters);
+            statement.setBytes(11,imageData);
+            statement.executeUpdate();
+            return true;
+        }
+        catch (SQLException e){
+            return false;
+        }
+    }
+
     public static void deleteFavorite(int userID,int propertyID){
         String query="DELETE FROM favorites WHERE user_id= ? AND property_id= ?";
         try {

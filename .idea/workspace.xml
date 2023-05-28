@@ -5,33 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2195315b-8747-4b43-ab9d-e13d6e5bb5a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/FavoritesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/favorites-scene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/images/exit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/EditAdController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/editad-scene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/CreatingAdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/CreatingAdController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/DatabaseCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/DatabaseCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/MyPropertiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/MyPropertiesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/PropertyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/SincereEstateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g5/sincereestate/SincereEstateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/homepage-scene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/propertypage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate/propertypage-scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/CreatingAdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/CreatingAdController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/DatabaseCenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/DatabaseCenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/HomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/HomePageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/MyPropertiesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/MyPropertiesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/PropertyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/SincereEstateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/SincereEstateApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/homepage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/homepage-scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/propertypage-scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/g5/sincereestate/propertypage-scene.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ToolWindowRun.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/g5/sincereestate" />
+  </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\isikenes\Documents\GitHub\sincereestate\src\main\resources\com\g5\sincereestate" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Binbariyon\Documents\GitHub\sincereestate\src\main\resources\com\g5\sincereestate\images" />
       <recent name="C:\Users\Binbariyon\Documents\GitHub\sincereestate\src\main\resources\com\g5\sincereestate" />
@@ -143,6 +118,8 @@
       <workItem from="1685107816510" duration="1473000" />
       <workItem from="1685109459484" duration="2228000" />
       <workItem from="1685180755887" duration="11507000" />
+      <workItem from="1685209751154" duration="290000" />
+      <workItem from="1685285192087" duration="6989000" />
     </task>
     <servers />
   </component>
@@ -159,5 +136,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
