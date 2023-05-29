@@ -101,6 +101,23 @@ public class DatabaseCenter {
             return false;
         }
     }
+    public static boolean canUpdateUser(String firstName,String lastName,String email,String password,String phoneNumber){
+        String query="UPDATE users SET first_name = ?, last_name=?, user_email=?, user_password=?,phone_number=? WHERE user_id="+signedUserID;
+        try{
+            PreparedStatement statement=connection.prepareStatement(query);
+            statement.setString(1,firstName);
+            statement.setString(2,lastName);
+            statement.setString(3,email);
+            statement.setString(4,password);
+            statement.setString(5,phoneNumber);
+            statement.executeUpdate();
+            return true;
+        }
+        catch (SQLException e){
+            return false;
+        }
+
+    }
 
     public static boolean canUpdateProperty(String propertyType,String propertyStatus,String furnished,
                                             int numberOfRooms, int squaremeters,int buildingAge,String city,

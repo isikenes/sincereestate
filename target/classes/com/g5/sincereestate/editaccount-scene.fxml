@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBE1FA;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.g5.sincereestate.SaveUserController">
+    <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 2px; -fx-text-fill: #BBE1FA;" text="Back">
+        <font>
+            <Font name="Consolas" size="20.0" />
+        </font>
+    </Button>
+    <Label alignment="CENTER" layoutX="122.0" layoutY="12.0" prefHeight="55.0" prefWidth="528.0" text="Update Your Account" textAlignment="CENTER">
+        <font>
+            <Font name="Consolas Bold" size="36.0" />
+        </font>
+    </Label>
+
+    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="252.0" layoutY="83.0" prefHeight="55.0" prefWidth="130.0" text="First name:">
+        <font>
+            <Font name="Consolas" size="18.0" />
+        </font>
+    </Label>
+    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="252.0" layoutY="133.0" prefHeight="55.0" prefWidth="130.0" text="Last Name:">
+        <font>
+            <Font name="Consolas" size="18.0" />
+        </font>
+    </Label>
+    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="252.0" layoutY="183.0" prefHeight="55.0" prefWidth="129.0" text="Email:">
+        <font>
+            <Font name="Consolas" size="18.0" />
+        </font>
+    </Label>
+    <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="226.0" layoutY="232.0" prefHeight="55.0" prefWidth="153.0" text="Phone Number:">
+        <font>
+            <Font name="Consolas" size="18.0" />
+        </font>
+    </Label>
+    <TextField fx:id="phoneNumberField" layoutX="380.0" layoutY="243.0" prefHeight="34.0" prefWidth="207.0">
+        <font>
+            <Font name="Consolas" size="16.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="emailField" layoutX="380.0" layoutY="193.0" prefHeight="34.0" prefWidth="207.0">
+        <font>
+            <Font name="Consolas" size="16.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="lastNameField" layoutX="380.0" layoutY="143.0" prefHeight="34.0" prefWidth="207.0">
+        <font>
+            <Font name="Consolas" size="16.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="firstNameField" layoutX="380.0" layoutY="93.0" prefHeight="34.0" prefWidth="207.0">
+        <font>
+            <Font name="Consolas" size="16.0" />
+        </font>
+    </TextField>
+
+
+   <CheckBox fx:id="passwordPaneController" layoutX="260.0" layoutY="300.0" mnemonicParsing="false" onAction="#checkBox" text="Do you want to change your password ?">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </CheckBox>
+   <Pane fx:id="passwordPane" layoutX="158.0" layoutY="350.0" prefHeight="154.0" prefWidth="468.0">
+      <children>
+          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="17.0" prefHeight="55.0" prefWidth="200.0" text="Current Passsword:">
+              <font>
+                  <Font name="Consolas" size="18.0" />
+              </font>
+          </Label>
+          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="17.0" layoutY="50.0" prefHeight="55.0" prefWidth="200.0" text="New Password:">
+              <font>
+                  <Font name="Consolas" size="18.0" />
+              </font>
+          </Label>
+          <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="17.0" layoutY="100.0" prefHeight="55.0" prefWidth="200.0" text="New Password(Again):">
+              <font>
+                  <Font name="Consolas" size="18.0" />
+              </font>
+          </Label>
+          <PasswordField fx:id="currentPasswordField" layoutX="217.0" layoutY="11.0" prefHeight="34.0" prefWidth="207.0">
+              <font>
+                  <Font name="Consolas" size="16.0" />
+              </font>
+          </PasswordField>
+          <PasswordField fx:id="newPasswordField" layoutX="217.0" layoutY="61.0" prefHeight="34.0" prefWidth="207.0">
+              <font>
+                  <Font name="Consolas" size="16.0" />
+              </font>
+          </PasswordField>
+
+          <PasswordField fx:id="againField" layoutX="217.0" layoutY="111.0" prefHeight="34.0" prefWidth="207.0">
+              <font>
+                  <Font name="Consolas" size="16.0" />
+              </font>
+          </PasswordField>
+      </children>
+   </Pane>
+    <Button layoutX="314.0" layoutY="519.0" mnemonicParsing="false" onAction="#saveUser" prefHeight="34.0" prefWidth="172.0" style="-fx-background-color: #3282B8; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;" text="Save">
+        <font>
+            <Font name="Consolas" size="26.0" />
+        </font>
+    </Button>
+
+</AnchorPane>

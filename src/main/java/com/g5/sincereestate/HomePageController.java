@@ -170,6 +170,17 @@ public class HomePageController implements Initializable {
         }
     }
 
+    public void GoAccountPage(ActionEvent event){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("account-scene.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            SincereEstateApplication.stage.setScene(scene);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void GoFavorites(ActionEvent event){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("favorites-scene.fxml"));
