@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class DatabaseCenter {
 
-    static Connection connection;
+    public static Connection connection;
     static int selectedProperty;
     static int signedUserID;
     static int scene;
