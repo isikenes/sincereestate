@@ -111,16 +111,23 @@ public class CreatingAdController implements Initializable {
             alert.show();
             return;
         }
-
-        if(DatabaseCenter.canCreateProperty(typeBox.getValue(),statusBox.getValue(),currentTime,furnishedBox.getValue(),
-                roomsBox.getValue(),Integer.parseInt(squaremetersField.getText()),Integer.parseInt(buildingAgeField.getText()),cityField.getText(),streetField.getText(),
-                Integer.parseInt(zipField.getText()),Integer.parseInt(priceField.getText()),imageData)) {
-            GoMyProperties(event);
-        } else{
+        try{
+            if(DatabaseCenter.canCreateProperty(typeBox.getValue(),statusBox.getValue(),currentTime,furnishedBox.getValue(),
+                    roomsBox.getValue(),Integer.parseInt(squaremetersField.getText()),Integer.parseInt(buildingAgeField.getText()),cityField.getText(),streetField.getText(),
+                    Integer.parseInt(zipField.getText()),Integer.parseInt(priceField.getText()),imageData)) {
+                GoMyProperties(event);
+            } else{
+                Alert alert=new Alert(Alert.AlertType.WARNING);
+                alert.setContentText("Check your information!");
+                alert.show();
+            }
+        }
+        catch (NumberFormatException e){
             Alert alert=new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Check your information!");
             alert.show();
         }
+
     }
 
     public void GoMyProperties(ActionEvent event){

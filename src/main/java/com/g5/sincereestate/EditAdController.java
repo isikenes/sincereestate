@@ -85,12 +85,33 @@ public class EditAdController implements Initializable {
         roomsBox.setValue(Integer.parseInt(DatabaseCenter.getPropertyData("number_of_rooms", propertyID)));
         roomsBox.getItems().addAll(1,2,3,4,5,6,7,8,9,10);
         Image image;
-        if (DatabaseCenter.getImage(propertyID) == null) {
-            image = new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
-        } else {
-            image = new Image(new ByteArrayInputStream(DatabaseCenter.getImage(propertyID)));
+        if(DatabaseCenter.getImage(propertyID)==null) {
+            String propertyType=DatabaseCenter.getPropertyData("property_type",propertyID);
+            String imagePath="";
+            switch (propertyType){
+                case "house":
+                    imagePath="images/house.jpg"; break;
+                case "manufactured":
+                    imagePath="images/manufactured.jpg"; break;
+                case "multi-family":
+                    imagePath="images/multi-family.jpg"; break;
+                case "townhome":
+                    imagePath="images/townhome.jpg"; break;
+                case "condos/co-ops":
+                    imagePath="images/condos.png"; break;
+                case "apartments":
+                    imagePath="images/apartment.png"; break;
+                default:imagePath="images/defimage.png";
+            }
+            image=new Image(HomePageController.class.getResourceAsStream(imagePath));
+            propertyImage.setImage(image);
+            //image=new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
         }
-        propertyImage.setImage(image);
+        else{
+            image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(propertyID)));
+            propertyImage.setImage(image);
+        }
+
         buildingAgeField.setText(DatabaseCenter.getPropertyData("building_age",propertyID));
         cityField.setText(DatabaseCenter.getPropertyData("city",propertyID));
         priceField.setText(DatabaseCenter.getPropertyData("property_price",propertyID));
@@ -127,16 +148,23 @@ public class EditAdController implements Initializable {
         if(!isImageChanged) {
             imageData=DatabaseCenter.getImage(propertyID);
         }
-
-        if(DatabaseCenter.canUpdateProperty(typeBox.getValue(),statusBox.getValue(),furnishedBox.getValue(),
-                roomsBox.getValue(),Integer.parseInt(squaremetersField.getText()),Integer.parseInt(buildingAgeField.getText()),cityField.getText(),streetField.getText(),
-                Integer.parseInt(zipField.getText()),Integer.parseInt(priceField.getText()),imageData)) {
-            GoPropertyScene(event);
-        } else{
+        try{
+            if(DatabaseCenter.canUpdateProperty(typeBox.getValue(),statusBox.getValue(),furnishedBox.getValue(),
+                    roomsBox.getValue(),Integer.parseInt(squaremetersField.getText()),Integer.parseInt(buildingAgeField.getText()),cityField.getText(),streetField.getText(),
+                    Integer.parseInt(zipField.getText()),Integer.parseInt(priceField.getText()),imageData)) {
+                GoPropertyScene(event);
+            } else{
+                Alert alert=new Alert(Alert.AlertType.WARNING);
+                alert.setContentText("Check your information!");
+                alert.show();
+            }
+        }
+        catch (NumberFormatException e){
             Alert alert=new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Check your information!");
             alert.show();
         }
+
     }
 
     public void GoPropertyScene(ActionEvent event){

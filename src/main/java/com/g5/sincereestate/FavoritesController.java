@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class FavoritesController implements Initializable {
@@ -223,12 +224,34 @@ public class FavoritesController implements Initializable {
         Label[] statusLabels=new Label[] {statusLabel1, statusLabel2, statusLabel3, statusLabel4, statusLabel5, statusLabel6};
         for (int i=0;i<indexes.length;i++){
             Image image;
-            if(DatabaseCenter.getImage(indexes[i])==null) {
-                image=new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
-            } else{
-                image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(indexes[i])));
+
+            if(DatabaseCenter.getImage(indexes[i])==null && indexes[i]!=0) {
+                String propertyType=DatabaseCenter.getPropertyData("property_type",indexes[i]);
+
+                String imagePath="";
+                switch (propertyType){
+                    case "house":
+                        imagePath="images/house.jpg"; break;
+                    case "manufactured":
+                        imagePath="images/manufactured.jpg"; break;
+                    case "multi-family":
+                        imagePath="images/multi-family.jpg"; break;
+                    case "townhome":
+                        imagePath="images/townhome.jpg"; break;
+                    case "condos/co-ops":
+                        imagePath="images/condos.png"; break;
+                    case "apartments":
+                        imagePath="images/apartment.png"; break;
+                    default:imagePath="images/defimage.png";
+                }
+                image=new Image(HomePageController.class.getResourceAsStream(imagePath));
+                imageViews[i].setImage(image);
+                //image=new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
             }
-            imageViews[i].setImage(image);
+            else if(indexes[i]!=0){
+                image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(indexes[i])));
+                imageViews[i].setImage(image);
+            }
             typeLabels[i].setText(DatabaseCenter.getPropertyData("property_type",indexes[i]));
             priceLabels[i].setText(DatabaseCenter.getPropertyData("property_price",indexes[i])+"$");
             statusLabels[i].setText(DatabaseCenter.getPropertyData("property_status",indexes[i]));

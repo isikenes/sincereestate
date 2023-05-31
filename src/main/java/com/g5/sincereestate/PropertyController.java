@@ -140,12 +140,33 @@ public class PropertyController implements Initializable {
         buildingAgeLabel.setText("Building Age: " + DatabaseCenter.getPropertyData("building_age", selectedProperty));
         furnishedLabel.setText("Furnished: " + DatabaseCenter.getPropertyData("furnished", selectedProperty));
         Image image;
-        if (DatabaseCenter.getImage(selectedProperty) == null) {
-            image = new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
-        } else {
-            image = new Image(new ByteArrayInputStream(DatabaseCenter.getImage(selectedProperty)));
+        if(DatabaseCenter.getImage(selectedProperty)==null) {
+            String propertyType=DatabaseCenter.getPropertyData("property_type",selectedProperty);
+
+            String imagePath="";
+            switch (propertyType){
+                case "house":
+                    imagePath="images/house.jpg"; break;
+                case "manufactured":
+                    imagePath="images/manufactured.jpg"; break;
+                case "multi-family":
+                    imagePath="images/multi-family.jpg"; break;
+                case "townhome":
+                    imagePath="images/townhome.jpg"; break;
+                case "condos/co-ops":
+                    imagePath="images/condos.png"; break;
+                case "apartments":
+                    imagePath="images/apartment.png"; break;
+                default:imagePath="images/defimage.png";
+            }
+            image=new Image(HomePageController.class.getResourceAsStream(imagePath));
+            propertyImage.setImage(image);
+            //image=new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
         }
-        propertyImage.setImage(image);
+        else{
+            image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(selectedProperty)));
+            propertyImage.setImage(image);
+        }
 
         int owner_id = Integer.parseInt(DatabaseCenter.getPropertyData("owner_id", selectedProperty));
         ownernameLabel.setText(DatabaseCenter.getUserData("first_name", owner_id) + " " + DatabaseCenter.getUserData("last_name", owner_id));

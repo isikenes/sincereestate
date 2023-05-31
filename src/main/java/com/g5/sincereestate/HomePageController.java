@@ -123,9 +123,28 @@ public class HomePageController implements Initializable {
 
         for(int i=0;i<indexes.length;i++) {
             Image image;
-            if(DatabaseCenter.getImage(indexes[i])==null) {
+            if(DatabaseCenter.getPropertyData("property_type",indexes[i]).equals("house")){
+                image=new Image(HomePageController.class.getResourceAsStream("images/house.jpg"));
+            }
+            else if(DatabaseCenter.getPropertyData("property_type",indexes[i]).equals("manufactured")){
+                image=new Image(HomePageController.class.getResourceAsStream("images/manufactured.jpg"));
+            }
+            else if(DatabaseCenter.getPropertyData("property_type",indexes[i]).equals("multi-family")){
+                image=new Image(HomePageController.class.getResourceAsStream("images/multi-family.jpg"));
+            }
+            else if(DatabaseCenter.getPropertyData("property_type",indexes[i]).equals("condos/co-ops")){
+                image=new Image(HomePageController.class.getResourceAsStream("images/condos.png"));
+            }
+            else if(DatabaseCenter.getPropertyData("property_type",indexes[i]).equals("apartments")){
+                image=new Image(HomePageController.class.getResourceAsStream("images/apartment.png"));
+            }
+            else if(DatabaseCenter.getPropertyData("property_type",indexes[i]).equals("townhome")){
+                image=new Image(HomePageController.class.getResourceAsStream("images/townhome.jpg"));
+            }
+            else if(DatabaseCenter.getImage(indexes[i])==null) {
                 image=new Image(HomePageController.class.getResourceAsStream("images/defimage.png"));
-            } else{
+            }
+            else{
                 image=new Image(new ByteArrayInputStream(DatabaseCenter.getImage(indexes[i])));
             }
 

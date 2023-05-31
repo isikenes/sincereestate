@@ -40,12 +40,28 @@ public class LoginController {
     }
 
     public void CheckLogin(ActionEvent event) {
+
         if(DatabaseCenter.isLoginInfoTrue(emailTF.getText(), passwordTF.getText())) {
-            GoHomePageScene(event);
+            if (emailTF.getText().equals("admin") && passwordTF.getText().equals("123")){
+                GoAdminPage();
+            }
+            else{
+                GoHomePageScene(event);
+            }
+
         } else{
             Alert alert=new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Check your information!");
             alert.show();
+        }
+    }
+    private void GoAdminPage() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SincereEstateApplication.class.getResource("admin-scene.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+            SincereEstateApplication.stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

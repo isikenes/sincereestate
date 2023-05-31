@@ -240,7 +240,7 @@
         </graphic>
     </Button>
    <ChoiceBox fx:id="filterBox" layoutX="620.0" layoutY="514.0" prefHeight="50.0" prefWidth="157.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-font-size: 20;" />
-   <Button layoutX="520.0" layoutY="504.0" onAction="#GoAccountPage" mnemonicParsing="false"  prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
+   <Button layoutX="520.0" layoutY="504.0" mnemonicParsing="false" onAction="#GoAccountPage" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #1B262C; -fx-border-width: 3px; -fx-text-fill: #BBE1FA;">
       <font>
          <Font name="Consolas" size="22.0" />
       </font>
